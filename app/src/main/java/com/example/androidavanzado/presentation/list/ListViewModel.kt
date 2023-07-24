@@ -6,14 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.androidavanzado.Model
 import com.example.androidavanzado.domain.usecases.GetHeroListUseCase
-import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class ListViewModel @Inject constructor(
+
+class ListViewModel (
     private val getHeroListUseCase: GetHeroListUseCase
 ) : ViewModel() {
 

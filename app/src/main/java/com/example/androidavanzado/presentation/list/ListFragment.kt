@@ -11,14 +11,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.androidavanzado.Model
 import com.example.androidavanzado.R
 import com.example.androidavanzado.databinding.FragmentListBinding
-import dagger.hilt.android.AndroidEntryPoint
+import org.koin.android.ext.android.inject
 
-@AndroidEntryPoint
-class ListFragment : Fragment() {
+class ListFragment() : Fragment() {
 
     private lateinit var binding:FragmentListBinding
     private lateinit var adapter : ItemAdapter
-    private val viewModel: ListViewModel by viewModels()
+    private val viewModel: ListViewModel by inject()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
